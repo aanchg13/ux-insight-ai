@@ -40,12 +40,14 @@ Return ONLY a valid JSON object with this exact structure, no other text before 
   "summary": "2-3 sentence executive summary"
 }}
 
+Keep quotes short (under 15 words each). Maximum 3 quotes per theme. Be concise throughout.
+
 Transcripts:
 {combined}"""
 
     message = client.messages.create(
         model="claude-opus-4-5",
-        max_tokens=1500,
+        max_tokens=4000,
         messages=[{"role": "user", "content": prompt}]
     )
 
